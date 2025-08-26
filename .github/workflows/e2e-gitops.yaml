@@ -59,10 +59,10 @@ jobs:
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
         
-      - name: Get Docker Image from Docker Hub
-        run: |
-          docker pull docker.io/samofochukwu/supermariogitopsproject:${{ env.VERSION }}
-          docker save -o supermariolatestdockerimage.tar docker.io/samofochukwu/supermariogitopsproject:${{ env.VERSION }}
+    #   - name: Get Docker Image from Docker Hub
+    #     run: |
+    #       docker pull docker.io/samofochukwu/supermariogitopsproject:${{ env.VERSION }}
+    #       docker save -o supermariolatestdockerimage.tar docker.io/samofochukwu/supermariogitopsproject:${{ env.VERSION }}
      
     #   - name: Run Trivy vulnerability scanner in tarball mode
     #     uses: aquasecurity/trivy-action@master
